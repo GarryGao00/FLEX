@@ -1,0 +1,4 @@
+diffusion_env/
+__pycache__/
+samples/
+train_samples_*/

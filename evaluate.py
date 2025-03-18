@@ -175,7 +175,7 @@ def main(args):
                           step = args.step,
                           Reynolds_number = args.Reynolds_number,
                           horizon=args.horizon,
-                          scratch_dir="/pscratch/sd/v/vmikuni/FM/climate/valid/",
+                          scratch_dir="/global/cfs/cdirs/m4633/foundationmodel/ERA5/ERA5processed/test",
                           superres=args.superres,
                           cond_snapshots = 1 if args.superres else args.cond_snapshots)
 
@@ -266,7 +266,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, default='nskt', help="Name of the dataset for evaluation.")
     parser.add_argument("--model", type=str, default='hybrid', help="Model used as the backbone")
     parser.add_argument("--size", type=str, default='medium', help="Model size. Options are [small, medium, big]")
-    parser.add_argument("--scratch-dir", type=str, default='/pscratch/sd/v/vmikuni/FM/nskt_tensor/', help="Name of the current run.")
+    parser.add_argument("--scratch-dir", type=str, default='/global/cfs/cdirs/m4633/foundationmodel/', help="Name of the current run.")
     parser.add_argument('--superres', action='store_true', default=False, help='Superresolution')
 
     parser.add_argument('--logsnr_shift', default=1., type=float, help='Shift logsnr value')
